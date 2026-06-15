@@ -956,3 +956,18 @@ button:active{
         margin-bottom: 35px;
     }
 }
+/* Mobile responsive fix for the header navigation */
+@media (max-width: 768px) {
+    header, nav {
+        display: flex;
+        flex-direction: column !important; /* Stack name and menu vertically */
+        align-items: center !important;
+        text-align: center;
+        gap: 10px; /* Adds space between the name and links */
+    }
+
+    /* Gives the nav links a bit of room on mobile */
+    nav a {
+        margin: 5px 10px !important;
+    }
+}
