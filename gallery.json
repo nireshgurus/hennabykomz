@@ -1,0 +1,22 @@
+[
+    {
+        "title": "Bridal Collection",
+        "folder": "bridal",
+        "images": ["bridal1.jpeg", "bridal2.jpeg", "bridal3.jpeg","bridal4.jpeg","bridal5.jpeg","bridal6.jpeg","bridal7.jpeg"]
+    },
+    {
+        "title": "Arabic Collection",
+        "folder": "arabic",
+        "images": ["arabic1.jpeg", "arabic2.jpeg", "arabic3.jpeg","arabic4.jpeg","arabic5.jpeg","arabic6.jpeg","arabic7.jpeg","arabic8.jpeg"]
+    },
+    {
+        "title": "Traditional Collection",
+        "folder": "traditional",
+        "images": ["traditional1.jpeg", "traditional2.jpeg", "traditional3.jpeg","traditional4.jpeg","traditional5.jpeg","traditional6.jpeg","traditional7.jpeg"]
+    },
+    {
+        "title": "Custom Collection",
+        "folder": "custom",
+        "images": ["custom1.jpeg","custom2.jpeg","custom3.jpeg","custom4.jpeg","custom5.jpeg","custom6.jpeg","custom7.jpeg","custom8.jpeg"]
+    }
+]

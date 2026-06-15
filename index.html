@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>komaladhanasekar</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo-text">
+            Henna by Komz
+        </div>
+
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero reveal">
+
+        <img src="images/logo.png" alt="Logo" class="logo">
+
+        <h1>Henna by Komz</h1>
+
+        <p class="subtitle">
+            Bridal • Arabic • Traditional Mehndi
+        </p>
+
+        <p class="tagline">
+            Crafting beautiful stories through henna artistry
+        </p>
+
+        <div class="buttons">
+            <button onclick="openBookingForm()">Book Now</button>
+            <button class="outline" onclick="document.getElementById('gallery').scrollIntoView({behavior:'smooth'})">View Gallery</button>
+        </div>
+
+    </section>
+
+    <section id="about" class="about">
+
+        <div class="about-image-container">
+            <div class="single-curtain"></div>
+            <img src="images/komz.jpeg" alt="Henna Artist" class="about-image">
+        </div>
+
+        <div class="about-content reveal">
+
+            <span class="about-label">
+                MEET THE ARTIST
+            </span>
+
+            <h2>
+                Your Story.<br>
+                Your Celebration.<br>
+                Your Signature Design.
+            </h2>
+
+            <p>
+                Every bride carries a unique story, and every design I create
+                is crafted to reflect that individuality.
+
+                Through intricate details, elegant artistry, and a passion for
+                tradition, I transform meaningful moments into timeless henna
+                designs that become part of your celebration.
+            </p>
+
+        </div>
+
+    </section>
+
+    <section id="services" class="services reveal">
+
+        <h2>Services</h2>
+
+        <div class="service-grid">
+
+            <div class="card reveal">
+                <h3>Bridal Mehndi</h3>
+                <p>Luxury bridal designs tailored for your special day.</p>
+            </div>
+
+            <div class="card reveal">
+                <h3>Arabic Mehndi</h3>
+                <p>Elegant floral and flowing Arabic patterns.</p>
+            </div>
+
+            <div class="card reveal">
+                <h3>Traditional Mehndi</h3>
+                <p>Detailed traditional Indian mehndi artistry.</p>
+            </div>
+
+            <div class="card reveal">
+                <h3>Custom Designs</h3>
+                <p>Personalized designs for every occasion.</p>
+            </div>
+
+        </div>
+
+        <div class="natural-henna-statement reveal">
+            <div class="statement-glow-bg"></div>
+            <span class="flourish-star">✦</span>
+            <p class="statement-text">Pure Tradition. Zero Chemicals. 100% Homemade Natural Henna.</p>
+            <span class="flourish-star">✦</span>
+        </div>
+
+        <div class="journey-wrapper reveal">
+            <div class="journey-line"></div>
+            
+            <div class="journey-step">
+                <div class="step-number">01</div>
+                <div class="step-content">
+                    <h4>Select Design</h4>
+                    <p>Explore our premium collections and pick your preferred signature look.</p>
+                </div>
+            </div>
+
+            <div class="journey-step">
+                <div class="step-number">02</div>
+                <div class="step-content">
+                    <h4>Check Availability</h4>
+                    <p>Provide your preferred calendar timeline & event details via our simple form.</p>
+                </div>
+            </div>
+
+            <div class="journey-step">
+                <div class="step-number">03</div>
+                <div class="step-content">
+                    <h4>Instant Confirm</h4>
+                    <p>Connect over WhatsApp to finalize details and secure your calendar slot.</p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section id="gallery" class="gallery reveal">
+
+        <h2>Gallery</h2>
+
+        <p class="gallery-hint">Tap a collection to view all designs</p>
+
+        <div id="galleryFolders" class="folder-grid"></div>
+
+        <div class="view-all-container reveal">
+            <div id="viewAllCard" class="view-all-card">
+                <div class="view-all-content">
+                    <i class="fa-solid fa-images"></i>
+                    <h3>View All Master Collection</h3>
+                    <span id="viewAllCount">0 Photos</span>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section id="contact" class="contact reveal">
+
+        <h2>Contact Us</h2>
+
+        <p>Follow us for our latest henna designs and updates, drop us an email, call us, or book an appointment below!</p>
+
+        <div class="contact-buttons">
+            <button onclick="openBookingForm()">Book Appointment</button>
+
+            <div class="social-icons-wrapper">
+                <a href="https://www.instagram.com/henna_by_komz?igsh=aHpybm9naDlnMXo5" target="_blank" class="contact-icon insta-icon">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="#" id="phoneLink" class="contact-icon phone-icon">
+                    <i class="fa-solid fa-phone"></i>
+                </a>
+
+                <a href="#" id="emailLink" class="contact-icon email-icon">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+
+    </section>
+
+    <footer class="main-footer">
+        <div class="footer-decor-dots">
+            <span></span><span></span><span></span><span></span><span></span>
+        </div>
+        
+        <div class="footer-content">
+            <h2 class="footer-logo">Henna by Komz</h2>
+            <p class="footer-tagline">Luxury Bridal & Traditional Mehndi Artist</p>
+            
+            <div class="footer-links">
+                <a href="https://www.instagram.com/henna_by_komz?igsh=aHpybm9naDlnMXo5" target="_blank">
+                    <i class="fa-brands fa-instagram"></i> Instagram
+                </a>
+                <a href="javascript:void(0)" onclick="openBookingForm()">
+                    <i class="fa-solid fa-calendar-check"></i> Book Appointment
+                </a>
+                <a href="#" id="footerWhatsappLink" target="_blank">
+                    <i class="fa-brands fa-whatsapp"></i> WhatsApp
+                </a>
+            </div>
+            
+            <div class="footer-divider"></div>
+            <p class="footer-copyright">&copy; 2026 Henna by Komz</p>
+        </div>
+    </footer>
+
+    <div id="galleryOverlay" class="overlay">
+        <div class="gallery-viewer">
+            <button class="close-btn" onclick="closeGalleryViewer()">&times;</button>
+            <h2 id="galleryViewerTitle"></h2>
+            <div id="galleryViewerGrid" class="gallery-grid"></div>
+        </div>
+    </div>
+
+    <div id="instagramLightbox" class="lightbox-overlay">
+        <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+        <div id="lightboxZoomWrapper" class="lightbox-zoom-wrapper">
+            <img id="lightboxTargetImage" src="" alt="Henna Artwork Detail View">
+        </div>
+    </div>
+
+    <div id="bookingOverlay" class="overlay">
+        <div class="booking-form">
+
+            <button class="close-btn" onclick="closeBookingForm()">&times;</button>
+
+            <h2>Book Your Appointment</h2>
+
+            <form id="bookingFormFields">
+
+                <label for="name">Name</label>
+                <input type="text" id="name" required placeholder="Your full name">
+
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" required placeholder="Your phone number">
+
+                <label for="service">Service</label>
+                <select id="service" required>
+                    <option value="">Select a service</option>
+                    <option value="Bridal Mehndi">Bridal Mehndi</option>
+                    <option value="Arabic Mehndi">Arabic Mehndi</option>
+                    <option value="Traditional Mehndi">Traditional Mehndi</option>
+                    <option value="Custom Design">Custom Design</option>
+                </select>
+
+                <label for="date">Preferred Date</label>
+                <input type="date" id="date" required>
+
+                <label for="message">Additional Notes</label>
+                <textarea id="message" rows="3" placeholder="Any details about your event..."></textarea>
+
+                <button type="submit" class="submit-btn">Send Booking Request</button>
+
+            </form>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
