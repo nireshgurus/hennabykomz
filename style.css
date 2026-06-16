@@ -984,3 +984,23 @@ button:active{
         font-size: 16px !important; /* Keeps the text highly readable on mobile phones */
     }
 }
+/* Mobile responsive fix for 2-column gallery grid */
+@media (max-width: 768px) {
+    .gallery-grid, 
+    #gallery-grid,
+    .grid-container { 
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important; /* Forces exactly 2 columns side-by-side */
+        gap: 12px !important; /* Adds a clean, professional space between the images */
+        padding: 10px !important;
+    }
+
+    .gallery-item img, 
+    .grid-item img,
+    .gallery-grid img {
+        width: 100% !important;
+        height: auto !important;
+        object-fit: cover !important;
+        border-radius: 12px !important; /* Gives them those beautiful rounded corners like in hen2.jpeg */
+    }
+}
