@@ -1003,4 +1003,12 @@ button:active{
         object-fit: cover !important;
         border-radius: 12px !important; /* Gives them those beautiful rounded corners like in hen2.jpeg */
     }
+    .pricing-grid {
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+    .price-card {
+        width: 100% !important;
+        max-width: 320px !important;
+    }
 }
