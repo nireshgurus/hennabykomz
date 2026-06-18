@@ -316,3 +316,53 @@ document.addEventListener('keydown', function(e) {
         return false;
     }
 });
+const protectedImages = [
+    document.querySelector('.about-image'), // The Artist Profile image
+    document.getElementById('galleryFolders'), // Main Gallery Folders
+    document.getElementById('galleryViewerGrid'), // Inner Popup Gallery Images
+    document.getElementById('lightboxTargetImage') // Zoomed Lightbox view
+];
+
+
+function activateImageShield() {
+    protectedImages.forEach(el => {
+        if (el) el.classList.add('screenshot-shield-active');
+    });
+}
+
+function deactivateImageShield() {
+    protectedImages.forEach(el => {
+        if (el) el.classList.remove('screenshot-shield-active');
+    });
+}
+document.addEventListener('visibilitychange', function() {
+    if (document.hidden) {
+        activateImageShield();
+    } else {
+        // Drop shield safely after they return to normal view
+        setTimeout(deactivateImageShield, 600);
+    }
+});
+
+window.addEventListener('blur', function() {
+    activateImageShield();
+    setTimeout(deactivateImageShield, 600);
+});
+
+document.addEventListener('keyup', function(e) {
+    // If they click the "Print Screen" key
+    if (e.key === 'PrintScreen' || e.keyCode === 44) {
+        activateImageShield();
+        navigator.clipboard.writeText("Screenshot Protected by Henna by Komz"); // Clear their clipboard data
+        alert("Screenshots are strictly disabled to protect original artwork assets.");
+        setTimeout(deactivateImageShield, 1000);
+    }
+});
+
+
+document.addEventListener('keydown', function(e) {
+    if ((e.metaKey || e.ctrlKey) && e.shiftKey && (e.key === 'S' || e.key === 's' || e.keyCode === 83)) {
+        activateImageShield();
+        setTimeout(deactivateImageShield, 2000);
+    }
+});
