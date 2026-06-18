@@ -1012,3 +1012,382 @@ button:active{
         max-width: 320px !important;
     }
 }
+/* ==========================================================================
+   PRICING & POLICY CUSTOM SECTION STYLES
+   ========================================================================== */
+#pricing {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #FAF6F0;
+}
+
+.pricing-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    color: #8B4513;
+    margin-bottom: 10px;
+}
+
+.pricing-subtitle {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 40px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Flexbox Grid handles layout spacing naturally */
+.pricing-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Unified Card Bases */
+.price-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 30px 20px;
+    width: 300px;
+    box-shadow: 0 8px 25px rgba(139, 69, 19, 0.05);
+    border: 2px solid #8B4513;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    box-sizing: border-box;
+}
+
+/* Middle Special Highlight Card */
+.price-card.popular-card {
+    box-shadow: 0 8px 25px rgba(139, 69, 19, 0.1);
+    position: relative;
+}
+
+.popular-badge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #8B4513;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-size: 11px;
+    padding: 4px 12px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.price-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    color: #8B4513;
+    border-bottom: 2px solid #F0E6D8;
+    padding-bottom: 10px;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.price-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 20px 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    line-height: 1.8;
+    color: #444;
+    flex-grow: 1;
+}
+
+.price-card ul li {
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.price-card ul li:last-child {
+    margin-bottom: 0;
+}
+
+.price-card ul li small {
+    color: #888;
+}
+
+.price-card strong {
+    color: #8B4513;
+}
+
+.card-note {
+    font-family: 'Poppins', sans-serif;
+    font-size: 11px;
+    color: #888;
+    font-style: italic;
+    margin: 15px 0 0 0;
+    text-align: center;
+}
+
+/* Detailed List Layout Variations */
+.column-layout {
+    display: flex;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+}
+
+.row-layout {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.column-layout small {
+    color: #777 !important;
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+.sub-layout-wrapper {
+    margin: 10px 0 0 0;
+    font-family: 'Poppins', sans-serif;
+    flex-grow: 1;
+}
+
+.sub-layout-wrapper h4 {
+    margin: 15px 0 5px 0;
+    font-size: 13px;
+    text-transform: uppercase;
+    color: #a47148;
+    letter-spacing: 0.5px;
+}
+
+.sub-layout-wrapper h4:first-of-type {
+    margin-top: 0;
+}
+
+/* Unique Travel Banner Component */
+.travel-notice {
+    max-width: 550px;
+    margin: 40px auto 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px dashed #8B4513;
+    border-radius: 12px;
+    position: relative;
+    box-shadow: 0 10px 20px rgba(139, 69, 19, 0.03);
+    box-sizing: border-box;
+}
+
+.notice-badge {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #8B4513;
+    color: #fff;
+    font-size: 12px;
+    padding: 3px 15px;
+    border-radius: 50px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    letter-spacing: 1px;
+    white-space: nowrap;
+}
+
+.notice-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 15px;
+    font-style: italic;
+    color: #5C2E0B;
+    margin: 8px 0 0 0;
+    line-height: 1.6;
+    font-weight: 600;
+}
+
+/* Policy Card Content Layouts */
+.payment-policy-container {
+    max-width: 850px;
+    margin: 50px auto 0 auto;
+    background: #fff;
+    border-radius: 20px;
+    padding: 35px;
+    box-shadow: 0 10px 30px rgba(139, 69, 19, 0.05);
+    border: 1px solid rgba(139, 69, 19, 0.08);
+    text-align: left;
+    box-sizing: border-box;
+}
+
+.policy-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #F0E6D8;
+    padding-bottom: 15px;
+}
+
+.policy-icon {
+    font-size: 24px;
+}
+
+.policy-header h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    color: #8B4513;
+    margin: 0;
+}
+
+.policy-content-layout {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.policy-steps {
+    flex: 1;
+    min-width: 280px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.policy-steps h4 {
+    color: #a47148;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.policy-steps ol {
+    padding-left: 20px;
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.8;
+    color: #444;
+}
+
+.policy-steps ol li {
+    margin-bottom: 12px;
+}
+
+.policy-steps ol li::marker {
+    color: #8B4513;
+    font-weight: bold;
+}
+
+.policy-steps ol li:last-child {
+    margin-bottom: 0;
+}
+
+.policy-methods {
+    flex: 1;
+    min-width: 250px;
+    background-color: #FAF6F0;
+    padding: 20px;
+    border-radius: 12px;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.policy-methods h4 {
+    color: #8B4513;
+    font-size: 15px;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.policy-methods p {
+    font-size: 13px;
+    color: #666;
+    margin: 0 0 15px 0;
+    line-height: 1.5;
+}
+
+.badge-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #5C2E0B;
+}
+
+.payment-badge {
+    background: #fff;
+    padding: 6px 12px;
+    border-radius: 6px;
+    border: 1px solid #E6DCD0;
+    display: inline-block;
+}
+
+/* ==========================================================================
+   RESPONSIVE MOBILE BREAKPOINTS (AUTOMATIC MOBILE ADJUSTMENTS)
+   ========================================================================== */
+@media (max-width: 768px) {
+    #pricing {
+        padding: 40px 15px;
+    }
+
+    .pricing-title {
+        font-size: 26px;
+    }
+
+    .pricing-subtitle {
+        font-size: 14px;
+        margin-bottom: 30px;
+    }
+
+    /* Stacks individual price cards into single rows vertically */
+    .pricing-grid {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .price-card {
+        width: 100%;
+        max-width: 340px;
+        padding: 25px 15px;
+    }
+
+    .travel-notice {
+        width: 100%;
+        max-width: 340px;
+        margin-top: 35px;
+        padding: 25px 15px;
+    }
+
+    .notice-text {
+        font-size: 14px;
+    }
+
+    /* Stacks internal policy columns vertically */
+    .payment-policy-container {
+        padding: 20px 15px;
+        margin-top: 35px;
+    }
+
+    .policy-header h3 {
+        font-size: 20px;
+    }
+
+    .policy-content-layout {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .policy-steps, 
+    .policy-methods {
+        width: 100%;
+        min-width: 100%;
+    }
+}
