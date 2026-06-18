@@ -1424,3 +1424,25 @@ mudikala security mapping pananum */
         padding: 2px 0 !important;
     }
 }
+/* anti theft protocol working code 11 final 1 */
+
+
+body {
+    -webkit-touch-callout: none !important; 
+    -webkit-user-select: none !important;   
+    -khtml-user-select: none !important;    
+    -moz-user-select: none !important;      
+    -ms-user-select: none !important;       
+    user-select: none !important;           
+}
+
+
+    -webkit-user-drag: none !important;    
+    user-drag: none !important;
+    pointer-events: none !important;      
+
+a, button, input, select, textarea, .contact-icon, .view-all-card, .folder-grid, .submit-btn, .close-btn {
+    pointer-events: auto !important;
+    -webkit-user-select: auto !important;
+    user-select: auto !important;
+}
