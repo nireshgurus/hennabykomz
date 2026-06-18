@@ -1374,42 +1374,53 @@ button:active{
 /* mobile resp matu konjam kolara iurku enna kadha nnu therila naliku pakka va idha
 mudikala security mapping pananum */
 /* updated version ipodhaiku idhu podhum nu neanikura check pananum nallah */
+/* modified versionn again again 4*/
 @media (max-width: 768px) {
     nav {
         display: flex !important;
-        flex-direction: column !important; /* Stack logo above menu */
+        flex-direction: column !important;
         align-items: center !important;
-        justify-content: center !important;
         width: 100% !important;
-        padding: 10px 0 !important;
+        padding: 6px 0 !important; /* Extremely thin top/bottom padding */
         box-sizing: border-box !important;
     }
 
-   
+    .logo-text {
+        font-size: 18px !important; /* Sleek, compact title text */
+        margin-bottom: 4px !important;
+    }
+
     nav ul {
         display: flex !important;
-        flex-wrap: wrap !important; /* Allow links to break to a new line naturally */
-        justify-content: center !important;
+        flex-direction: row !important; /* Force them onto ONE single row */
+        flex-wrap: nowrap !important; /* STRICTLY forbid breaking into a second line */
+        justify-content: flex-start !important; /* Start from the left so it scrolls naturally */
         align-items: center !important;
-        gap: 12px 18px !important; /* 12px vertical gap between rows, 18px horizontal spacing */
+        
+        /* The Magic Mix for Swipe Scrolling */
+        overflow-x: auto !important; /* Enable side-to-side finger scrolling */
+        -webkit-overflow-scrolling: touch !important; /* Ultra-smooth swiping on iPhones */
+        
         width: 100% !important;
         max-width: 100% !important;
-        padding: 5px 10px !important;
-        margin: 5px 0 0 0 !important;
-        list-style: none !important;
+        gap: 20px !important; /* Clear horizontal breathing room between links */
+        padding: 4px 15px !important; /* Side padding so the links don't touch the screen edge */
+        margin: 0 !important;
         box-sizing: border-box !important;
     }
 
-    
+    /* Hide the ugly scrollbar track while keeping the swipe functionality working */
+    nav ul::-webkit-scrollbar {
+        display: none !important;
+    }
+
     nav ul li {
         margin: 0 !important;
-        display: inline-block !important;
+        flex: 0 0 auto !important; /* Prevents the browser from shrinking or squishing the text */
     }
 
     nav a {
-        display: inline-block !important;
-        padding: 4px 2px !important;
-        font-size: 15px !important; /* Slightly smaller text so it looks neat */
-        white-space: nowrap !important; /* Prevents an individual word from cutting in half */
+        font-size: 14px !important; /* Perfectly readable, compact font */
+        padding: 2px 0 !important;
     }
 }
