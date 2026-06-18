@@ -409,3 +409,9 @@ window.addEventListener('blur', function() {
     // We add a tiny delay so the pop-up appears right as they switch back to the screen
     setTimeout(showScreenshotWarning, 500);
 });
+// Upgraded high-sensitivity PrintScreen listener for all laptop variations (Fn + PrtScn)
+document.addEventListener('keyup', function(e) {
+    if (e.key === 'PrintScreen' || e.keyCode === 44 || e.key === 'Snapshot' || e.code === 'PrintScreen') {
+        showScreenshotWarning();
+    }
+});
