@@ -294,3 +294,25 @@ if (aboutContainer) {
     }, { threshold: 0.1 });
     maskObserver.observe(aboutContainer);
 }
+// SECURITY: ANTI-THEFT DRAG & KEYBOARD INSPECTION SHIELD
+document.querySelectorAll('img').forEach(img => {
+    img.addEventListener('dragstart', (e) => e.preventDefault());
+    
+    // Explicitly allow custom click events for your website's gallery functions
+    img.style.pointerEvents = 'auto'; 
+});
+document.addEventListener('keydown', function(e) {
+    // Block F12 (Inspect Element)
+    if (e.keyCode === 123) {
+        e.preventDefault();
+        return false;
+    }
+    if (e.ctrlKey && e.shiftKey && (e.keyCode === 73 || e.keyCode === 74 || e.keyCode === 67)) {
+        e.preventDefault();
+        return false;
+    }
+    if (e.ctrlKey && e.keyCode === 85) {
+        e.preventDefault();
+        return false;
+    }
+});
