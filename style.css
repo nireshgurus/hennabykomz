@@ -1446,3 +1446,367 @@ a, button, input, select, textarea, .contact-icon, .view-all-card, .folder-grid,
     -webkit-user-select: auto !important;
     user-select: auto !important;
 }
+
+/* ==========================================================================
+   PREMIUM GRAPHICS & STYLING FOR THE PRICING SECTION
+   ========================================================================== */
+
+/* Main Section Background Graphic Curve */
+#pricing {
+    background: radial-gradient(circle at top right, #FFFDF9 0%, #FAF6F0 100%) !important;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Subtle background accent flourish */
+#pricing::before {
+    content: "✦";
+    position: absolute;
+    top: 5%;
+    right: 8%;
+    font-size: 80px;
+    color: rgba(139, 69, 19, 0.02);
+    font-family: serif;
+    pointer-events: none;
+}
+
+.pricing-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    color: #8B4513;
+    margin-bottom: 8px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.pricing-subtitle {
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    color: #666;
+    margin-bottom: 50px;
+}
+
+/* The Grid Layout */
+.pricing-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+/* Premium Card Graphic Base */
+.price-card {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 35px 25px;
+    width: 310px;
+    box-shadow: 0 10px 30px rgba(139, 69, 19, 0.04);
+    border: 1px solid rgba(139, 69, 19, 0.15);
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    position: relative;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    box-sizing: border-box;
+}
+
+/* Luxury Card Hover Graphics & Lift Effect */
+.price-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(139, 69, 19, 0.09);
+    border-color: #8B4513;
+}
+
+/* Ornamental Header Ribbon Line inside Cards */
+.price-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    color: #8B4513;
+    margin-top: 0;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    position: relative;
+}
+
+.price-card h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background-color: #8B4513;
+}
+
+/* Highlight Graphic for the Popular Bridal Card */
+.price-card.popular-card {
+    border: 2px solid #8B4513;
+    background: linear-gradient(to bottom, #ffffff, #FFFDF9);
+}
+
+/* Floating Popular Graphic Badge */
+.popular-badge {
+    position: absolute;
+    top: -14px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(135deg, #8B4513 0%, #A47148 100%);
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-size: 11px;
+    padding: 5px 16px;
+    border-radius: 50px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    box-shadow: 0 4px 10px rgba(139, 69, 19, 0.25);
+}
+
+/* Interactive List Elements with Elegant Dotted Leader Lines */
+.price-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 20px 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    flex-grow: 1;
+}
+
+.price-card ul li {
+    margin-bottom: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end; /* Align items to baseline for dots */
+}
+
+/* Custom Vector Dot Leaders connecting Text to Price */
+.price-card ul li span {
+    background: #ffffff;
+    padding-right: 6px;
+    position: relative;
+    z-index: 2;
+}
+
+/* Force specific backgrounds for items inside the gradient popular card */
+.popular-card ul li span {
+    background: transparent !important;
+}
+
+/* Beautiful secondary details */
+.price-card ul li small {
+    color: #888;
+    font-size: 11px;
+    font-weight: 300;
+    display: block;
+}
+
+.price-card ul li strong {
+    color: #8B4513;
+    font-weight: 600;
+    font-size: 15px;
+    padding-left: 6px;
+    background: #ffffff;
+    z-index: 2;
+}
+
+.popular-card ul li strong {
+    background: transparent !important;
+}
+
+/* Leg Section Subheaders */
+.sub-layout-wrapper h4 {
+    font-family: 'Poppins', sans-serif;
+    margin: 20px 0 10px 0;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #a47148;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+.card-note {
+    font-family: 'Poppins', sans-serif;
+    font-size: 11px;
+    color: #999;
+    font-style: italic;
+    margin: 15px 0 0 0;
+    text-align: center;
+}
+
+/* ==========================================================================
+   SERVICE BANNER & TRAVEL POLICY GRAPHICS
+   ========================================================================== */
+
+.travel-notice {
+    max-width: 600px;
+    margin: 50px auto 0 auto;
+    padding: 24px 20px;
+    background-color: #ffffff;
+    border: 1px dashed rgba(139, 69, 19, 0.4);
+    border-radius: 16px;
+    position: relative;
+    box-shadow: 0 10px 25px rgba(139, 69, 19, 0.02);
+}
+
+.notice-badge {
+    position: absolute;
+    top: -14px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #8B4513;
+    color: #fff;
+    font-size: 11px;
+    padding: 4px 16px;
+    border-radius: 50px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.notice-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 16px;
+    font-style: italic;
+    color: #5C2E0B;
+    margin: 5px 0 0 0;
+    line-height: 1.6;
+    font-weight: 600;
+}
+
+/* Booking & Payment Matrix Panel */
+.payment-policy-container {
+    max-width: 900px;
+    margin: 60px auto 20px auto;
+    background: #ffffff;
+    border-radius: 24px;
+    padding: 40px;
+    box-shadow: 0 15px 35px rgba(139, 69, 19, 0.04);
+    border: 1px solid rgba(139, 69, 19, 0.06);
+    text-align: left;
+    box-sizing: border-box;
+}
+
+.policy-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+    border-bottom: 1px solid #F0E6D8;
+    padding-bottom: 20px;
+}
+
+.policy-icon {
+    font-size: 26px;
+}
+
+.policy-header h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    color: #8B4513;
+    margin: 0;
+    font-weight: 600;
+}
+
+.policy-content-layout {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.policy-steps {
+    flex: 1.2;
+    min-width: 280px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.policy-steps h4, .policy-methods h4 {
+    color: #a47148;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+/* Custom Ordered Checklist Graphics */
+.policy-steps ol {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.policy-steps ol li {
+    margin-bottom: 16px;
+    position: relative;
+    padding-left: 30px;
+    font-size: 14px;
+    line-height: 1.7;
+    color: #444;
+}
+
+.policy-steps ol li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: 2px;
+    color: #8B4513;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.policy-methods {
+    flex: 0.8;
+    min-width: 280px;
+    background-color: #FAF6F0;
+    padding: 25px;
+    border-radius: 16px;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid rgba(139, 69, 19, 0.04);
+}
+
+.policy-methods p {
+    font-size: 13px;
+    color: #666;
+    margin: 0 0 20px 0;
+    line-height: 1.6;
+}
+
+.badge-row {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Premium Payment Badge Graphics */
+.payment-badge {
+    background: #ffffff;
+    padding: 10px 16px;
+    border-radius: 10px;
+    border: 1px solid #E6DCD0;
+    font-size: 13px;
+    font-weight: 500;
+    color: #5C2E0B;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.payment-badge:hover {
+    border-color: #8B4513;
+    background-color: #FFFDF9;
+}
+
+/* Responsive Mobile Compression Rules */
+@media (max-width: 768px) {
+    .pricing-title { font-size: 28px; }
+    .payment-policy-container { padding: 25px 20px; }
+    .policy-content-layout { gap: 25px; }
+    .price-card { width: 100%; max-width: 340px; }
+}
