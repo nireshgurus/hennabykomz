@@ -366,3 +366,46 @@ document.addEventListener('keydown', function(e) {
         setTimeout(deactivateImageShield, 2000);
     }
 });
+// ==========================================================================
+// SCREENSHOT MONITORING & POP-UP WARNING SYSTEM
+// ==========================================================================
+
+function showScreenshotWarning() {
+    const warningModal = document.getElementById('screenshotWarningOverlay');
+    if (warningModal) {
+        warningModal.style.display = 'flex';
+        
+        // Optional: Wipe out their clipboard if they hit standard PrintScreen
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText("Protected Content - Henna by Komz");
+        }
+    }
+}
+
+function closeScreenshotWarning() {
+    const warningModal = document.getElementById('screenshotWarningOverlay');
+    if (warningModal) {
+        warningModal.style.display = 'none';
+    }
+}
+
+// 1. Intercept Desktop "Print Screen" key press
+document.addEventListener('keyup', function(e) {
+    if (e.key === 'PrintScreen' || e.keyCode === 44) {
+        showScreenshotWarning();
+    }
+});
+
+// 2. Intercept Windows Snipping Tool (Windows Key + Shift + S)
+document.addEventListener('keydown', function(e) {
+    if ((e.metaKey || e.ctrlKey) && e.shiftKey && (e.key === 'S' || e.key === 's' || e.keyCode === 83)) {
+        showScreenshotWarning();
+    }
+});
+
+// 3. Intercept Mobile Browser minimization/blur 
+// (When phone users open side gestures or swipe to snap pictures, it triggers this)
+window.addEventListener('blur', function() {
+    // We add a tiny delay so the pop-up appears right as they switch back to the screen
+    setTimeout(showScreenshotWarning, 500);
+});
