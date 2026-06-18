@@ -1,57 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-    <!-- Local Business SEO Schema Architecture -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "Henna by Komz",
-  "image": "images/logo.png",
-  "@id": "",
-  "url": "https://yourusername.github.io/your-repository-name",
-  "telephone": "YOUR_PHONE_NUMBER_HERE",
-  "priceRange": "₹750 - ₹3000",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Your City Name",
-    "addressRegion": "State Name",
-    "addressCountry": "IN"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": YOUR_LATITUDE,
-    "longitude": YOUR_LONGITUDE
-  },
-  "openingHoursSpecification": {
-    "@type": "OpeningHoursSpecification",
-    "dayOfWeek": [
-      "Monday",
-      "Tuesday",
-      "Wednesday",
-      "Thursday",
-      "Friday",
-      "Saturday",
-      "Sunday"
-    ],
-    "opens": "09:00",
-    "closes": "21:00"
-  },
-  "sameAs": [
-    "https://www.instagram.com/henna_by_komz?igsh=aHpybm9naDlnMXo5"
-  ]
-}
-</script>
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Henna by komz</title>
+    
+    <!-- ==========================================================================
+       PRIMARY SEO METADATA ARCHITECTURE
+       ========================================================================== -->
+    <title>Henna by Komz | Professional Bridal & Traditional Mehndi Artist</title>
+    <meta name="description" content="Exquisite bridal, Arabic, and traditional Indian mehndi designs by Henna by Komz. 100% homemade natural chemical-free henna for weddings and celebrations. Book your custom calendar slot today!">
+    <meta name="keywords" content="Henna by Komz, bridal mehndi artist, bridal henna design, traditional mehndi, Arabic henna, wedding mehndi artist, homemade natural henna, custom mehndi design">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Data for Social Media Links (WhatsApp, Instagram previews) -->
+    <meta property="og:title" content="Henna by Komz | Bridal & Traditional Mehndi Artist">
+    <meta property="og:description" content="Pure Tradition. Zero Chemicals. 100% Homemade Natural Henna artwork tailored for your special celebrations.">
+    <meta property="og:image" content="images/logo.png">
+    <meta property="og:type" content="website">
 
+    <!-- Fonts & Icons Stylesheets -->
     <link rel="stylesheet" href="style.css">
-
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- ==========================================================================
+       LOCAL BUSINESS SEO SCHEMA ARCHITECTURE (MOVED INSIDE HEAD)
+       ========================================================================== -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Henna by Komz",
+      "image": "images/logo.png",
+      "@id": "",
+      "url": "https://yourusername.github.io/your-repository-name",
+      "telephone": "YOUR_PHONE_NUMBER_HERE",
+      "priceRange": "₹750 - ₹3000",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Your City Name",
+        "addressRegion": "State Name",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "YOUR_LATITUDE",
+        "longitude": "YOUR_LONGITUDE"
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday"
+        ],
+        "opens": "09:00",
+        "closes": "21:00"
+      },
+      "sameAs": [
+        "https://www.instagram.com/henna_by_komz?igsh=aHpybm9naDlnMXo5"
+      ]
+    }
+    </script>
 </head>
 
 <body>
@@ -72,8 +87,8 @@
     </nav>
 
     <section class="hero reveal">
-
-        <img src="images/logo.png" alt="Logo" class="logo">
+        <!-- SEO Image Enhancement -->
+        <img src="images/logo.png" alt="Henna by Komz Luxury Branding Logo Portfolio Asset" class="logo">
 
         <h1>Henna by Komz</h1>
 
@@ -89,28 +104,22 @@
             <button onclick="openBookingForm()">Book Now</button>
             <button class="outline" onclick="document.getElementById('gallery').scrollIntoView({behavior:'smooth'})">View Gallery</button>
         </div>
-
     </section>
 
     <section id="about" class="about">
-
         <div class="about-image-container">
             <div class="single-curtain"></div>
-            <img src="images/komz.jpeg" alt="Henna Artist" class="about-image">
+            <!-- SEO Image Enhancement -->
+            <img src="images/komz.jpeg" alt="Komz - Professional Bridal Mehndi Artist creating traditional henna patterns" class="about-image">
         </div>
 
         <div class="about-content reveal">
-
-            <span class="about-label">
-                MEET THE ARTIST
-            </span>
-
+            <span class="about-label">MEET THE ARTIST</span>
             <h2>
                 Your Story.<br>
                 Your Celebration.<br>
                 Your Signature Design.
             </h2>
-
             <p>
                 Every bride carries a unique story, and every design I create
                 is crafted to reflect that individuality.
@@ -119,37 +128,29 @@
                 tradition, I transform meaningful moments into timeless henna
                 designs that become part of your celebration.
             </p>
-
         </div>
-
     </section>
 
     <section id="services" class="services reveal">
-
         <h2>Services</h2>
 
         <div class="service-grid">
-
             <div class="card reveal">
                 <h3>Bridal Mehndi</h3>
                 <p>Luxury bridal designs tailored for your special day.</p>
             </div>
-
             <div class="card reveal">
                 <h3>Arabic Mehndi</h3>
                 <p>Elegant floral and flowing Arabic patterns.</p>
             </div>
-
             <div class="card reveal">
                 <h3>Traditional Mehndi</h3>
                 <p>Detailed traditional Indian mehndi artistry.</p>
             </div>
-
             <div class="card reveal">
                 <h3>Custom Designs</h3>
                 <p>Personalized designs for every occasion.</p>
             </div>
-
         </div>
 
         <div class="natural-henna-statement reveal">
@@ -186,15 +187,11 @@
                 </div>
             </div>
         </div>
-
     </section>
 
     <section id="gallery" class="gallery reveal">
-
         <h2>Gallery</h2>
-
         <p class="gallery-hint">Tap a collection to view all designs</p>
-
         <div id="galleryFolders" class="folder-grid"></div>
 
         <div class="view-all-container reveal">
@@ -206,9 +203,9 @@
                 </div>
             </div>
         </div>
-
     </section>
 
+    <!-- Note: Keep the updated CSS-controlled layout we generated earlier to maintain graphical styling -->
     <section id="pricing" class="pricing reveal" style="padding: 60px 20px; text-align: center; background-color: #FAF6F0;">
         <h2 style="font-family: 'Playfair Display', serif; font-size: 32px; color: #8B4513; margin-bottom: 10px;">Investment & Packages</h2>
         <p style="font-family: 'Poppins', sans-serif; font-size: 16px; color: #666; margin-bottom: 40px; max-width: 600px; margin-left: auto; margin-right: auto;">Clear and transparent pricing tailored for your special celebrations.</p>
@@ -254,11 +251,9 @@
         </div>
 
         <div class="travel-notice" style="max-width: 550px; margin: 40px auto 0 auto; padding: 20px; background-color: #fff; border: 1px dashed #8B4513; border-radius: 12px; position: relative; box-shadow: 0 10px 20px rgba(139, 69, 19, 0.03);">
-            
             <span style="position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: #8B4513; color: #fff; font-size: 12px; padding: 3px 15px; border-radius: 50px; font-family: 'Poppins', sans-serif; font-weight: 500; letter-spacing: 1px; display: flex; align-items: center; gap: 5px;">
                 🚗 Service Note
             </span>
-
             <p style="font-family: 'Playfair Display', serif; font-size: 15px; font-style: italic; color: #5C2E0B; margin: 8px 0 0 0; line-height: 1.6; font-weight: 600; text-align: center;">
                 "Travel charges will be added as applicable based on your wonderful event's location."
             </p>
@@ -303,13 +298,10 @@
                 </div>
             </div>
         </div>
-
     </section>
 
     <section id="contact" class="contact reveal">
-
         <h2>Contact Us</h2>
-
         <p>Follow us for our latest henna designs and updates, drop us an email, call us, or book an appointment below!</p>
 
         <div class="contact-buttons">
@@ -319,17 +311,14 @@
                 <a href="https://www.instagram.com/henna_by_komz?igsh=aHpybm9naDlnMXo5" target="_blank" class="contact-icon insta-icon">
                     <i class="fa-brands fa-instagram"></i>
                 </a>
-
                 <a href="#" id="phoneLink" class="contact-icon phone-icon">
                     <i class="fa-solid fa-phone"></i>
                 </a>
-
                 <a href="#" id="emailLink" class="contact-icon email-icon">
                     <i class="fa-solid fa-envelope"></i>
                 </a>
             </div>
         </div>
-
     </section>
 
     <nav style="display:none;"></nav>
@@ -371,19 +360,16 @@
     <div id="instagramLightbox" class="lightbox-overlay">
         <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
         <div id="lightboxZoomWrapper" class="lightbox-zoom-wrapper">
-            <img id="lightboxTargetImage" src="" alt="Henna Artwork Detail View">
+            <img id="lightboxTargetImage" src="" alt="Henna Artwork Detail Zoomed View">
         </div>
     </div>
 
     <div id="bookingOverlay" class="overlay">
         <div class="booking-form">
-
             <button class="close-btn" onclick="closeBookingForm()">&times;</button>
-
             <h2>Book Your Appointment</h2>
 
             <form id="bookingFormFields">
-
                 <label for="name">Name</label>
                 <input type="text" id="name" required placeholder="Your full name">
 
@@ -409,13 +395,12 @@
                 <textarea id="message" rows="3" placeholder="Any details about your event..."></textarea>
 
                 <button type="submit" class="submit-btn">Send Booking Request</button>
-
             </form>
-
         </div>
     </div>
+
     <script>
-        //evanalaiyu eadhuvum panna mudiyadhu leayyyyy
+        // evanalaiyu eadhuvum panna mudiyadhu leayyyyy
         document.addEventListener('contextmenu', function(e) {
             e.preventDefault();
         }, false);
