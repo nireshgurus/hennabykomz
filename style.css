@@ -1810,3 +1810,13 @@ a, button, input, select, textarea, .contact-icon, .view-all-card, .folder-grid,
     .policy-content-layout { gap: 25px; }
     .price-card { width: 100%; max-width: 340px; }
 }
+
+/* ==========================================================================
+   SCREENSHOT PROTECTION BLUR MATRIX
+   ========================================================================== */
+
+/* This class will be instantly forced onto your sensitive images when a screenshot is attempted */
+.screenshot-shield-active {
+    filter: blur(50px) brightness(0) !important; /* Makes the photo completely pitch black and blurry */
+    transition: filter 0.1s ease-in-out !important;
+}
