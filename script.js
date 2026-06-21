@@ -398,3 +398,50 @@ document.addEventListener('touchstart', function(e) {
         showScreenshotWarning();
     }
 });
+// ==========================================================================
+// 1-MINUTE GALLERY TIMER WARNING SYSTEM
+// ==========================================================================
+
+let galleryTimer = null;
+let warningAlreadyShown = false; // Prevents annoying the user by showing it repeatedly
+
+function showScreenshotWarning() {
+    const warningModal = document.getElementById('screenshotWarningOverlay');
+    if (warningModal) {
+        warningModal.style.display = 'flex';
+        warningAlreadyShown = true; // Mark as shown
+    }
+}
+
+function closeScreenshotWarning() {
+    const warningModal = document.getElementById('screenshotWarningOverlay');
+    if (warningModal) {
+        warningModal.style.display = 'none';
+    }
+}
+
+// Set up the tracker to watch when they look at the Gallery section
+const gallerySection = document.getElementById('gallery');
+
+if (gallerySection) {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            // If the user scrolls INTO the gallery section
+            if (entry.isIntersecting && !warningAlreadyShown) {
+                // Start a 1-minute (60,000 milliseconds) countdown timer
+                galleryTimer = setTimeout(() => {
+                    showScreenshotWarning();
+                }, 60000); 
+            } 
+            // If they scroll AWAY from the gallery section before 1 minute hits
+            else {
+                // Clear the timer so it doesn't pop up while they look at other sections
+                if (galleryTimer) {
+                    clearTimeout(galleryTimer);
+                }
+            }
+        });
+    }, { threshold: 0.2 }); // Triggers when at least 20% of the gallery is visible on screen
+
+    observer.observe(gallerySection);
+}
