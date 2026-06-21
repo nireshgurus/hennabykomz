@@ -398,6 +398,24 @@
         </div>
     </div>
 
+    <!-- ==========================================================================
+       GALLERY TIMED ANTI-SCREENSHOT NOTICE OVERLAY
+       ========================================================================== -->
+    <div id="screenshotWarningOverlay" class="overlay" style="display: none; justify-content: center; align-items: center; z-index: 10000; background: rgba(0, 0, 0, 0.85); position: fixed; top: 0; left: 0; width: 100%; height: 100%;">
+        <div style="background: #fff; border-radius: 16px; padding: 35px 25px; width: 90%; max-width: 400px; text-align: center; box-shadow: 0 15px 40px rgba(0,0,0,0.3); border: 2px solid #8B4513; font-family: 'Poppins', sans-serif;">
+            <div style="font-size: 45px; margin-bottom: 15px;">⚠️</div>
+            <h3 style="font-family: 'Playfair Display', serif; font-size: 22px; color: #8B4513; margin: 0 0 10px 0;">Notice to Visitors</h3>
+            <p style="font-size: 14px; color: #555; line-height: 1.6; margin: 0 0 25px 0;">
+                Taking screenshots or capturing images from this portfolio is a direct copyright violation. Please do not attempt to copy or download original designs.
+                <br><br>
+                <strong>Copyright &copy; 2026 Henna by Komz. All Rights Reserved.</strong>
+            </p>
+            <button onclick="closeScreenshotWarning()" style="background: #8B4513; color: white; border: none; padding: 12px 30px; border-radius: 8px; font-weight: 500; cursor: pointer; width: 100%; transition: background 0.2s;">
+                I Understand
+            </button>
+        </div>
+    </div>
+
     <script>
         document.addEventListener('contextmenu', function(e) {
             e.preventDefault();
@@ -408,17 +426,3 @@
 </body>
 
 </html>
-<div id="screenshotWarningOverlay" class="overlay" style="display: none; justify-content: center; align-items: center; z-index: 10000; background: rgba(0, 0, 0, 0.85);">
-    <div style="background: #fff; border-radius: 16px; padding: 35px 25px; width: 90%; max-width: 400px; text-align: center; box-shadow: 0 15px 40px rgba(0,0,0,0.3); border: 2px solid #8B4513; font-family: 'Poppins', sans-serif;">
-        <div style="font-size: 45px; margin-bottom: 15px;">⚠️</div>
-        <h3 style="font-family: 'Playfair Display', serif; font-size: 22px; color: #8B4513; margin: 0 0 10px 0;">Artwork Protection Active</h3>
-        <p style="font-size: 14px; color: #555; line-height: 1.6; margin: 0 0 25px 0;">
-            Screenshots, screen recording, and unauthorized image saving are strictly monitored to protect original henna designs. 
-            <br><br>
-            <strong>Copyright &copy; 2026 Henna by Komz. All Rights Reserved.</strong>
-        </p>
-        <button onclick="closeScreenshotWarning()" style="background: #8B4513; color: white; border: none; padding: 12px 30px; border-radius: 8px; font-weight: 500; cursor: pointer; width: 100%; transition: background 0.2s;">
-            I Understand
-        </button>
-    </div>
-</div>
