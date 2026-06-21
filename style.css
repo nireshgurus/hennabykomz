@@ -1820,3 +1820,13 @@ a, button, input, select, textarea, .contact-icon, .view-all-card, .folder-grid,
     filter: blur(50px) brightness(0) !important; /* Makes the photo completely pitch black and blurry */
     transition: filter 0.1s ease-in-out !important;
 }
+/* Smooth Artist Image Blur Transition */
+.about-image {
+    transition: filter 1.5s ease-in-out; /* Makes the blur effect slide in smoothly over 1.5 seconds */
+}
+
+/* This class will be added by JavaScript after 9 seconds */
+.about-image.blurred-secure {
+    filter: blur(15px) grayscale(30%); /* Blurs the image completely so details cannot be seen */
+    pointer-events: none; /* Disables right-clicks or interactions */
+}
