@@ -445,3 +445,36 @@ if (gallerySection) {
 
     observer.observe(gallerySection);
 }
+// ==========================================================================
+// 9-SECOND ARTIST IMAGE BLUR SECURITY SYSTEM
+// ==========================================================================
+
+let artistImageTimer = null;
+
+// Target the about image elements
+const aboutImage = document.querySelector('.about-image');
+const aboutSection = document.getElementById('about');
+
+if (aboutSection && aboutImage) {
+    const artistObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            // If the user scrolls down and the About section is visible on screen
+            if (entry.isIntersecting) {
+                // Start a 9-second (9,000 milliseconds) countdown
+                artistImageTimer = setTimeout(() => {
+                    aboutImage.classList.add('blurred-secure');
+                }, 9000);
+            } 
+            // If they scroll away completely from the about section
+            else {
+                // Clear the timer and restore the crisp image when they leave
+                if (artistImageTimer) {
+                    clearTimeout(artistImageTimer);
+                }
+                aboutImage.classList.remove('blurred-secure');
+            }
+        });
+    }, { threshold: 0.2 }); // Triggers when 20% of the section is visible
+
+    artistObserver.observe(aboutSection);
+}
